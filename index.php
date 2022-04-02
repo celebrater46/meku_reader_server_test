@@ -22,6 +22,11 @@ if($novel_id === null) {
     if($ep_id === null){
         $json = array_merge($json, $episodes);
     } else {
+        if($chap_id === null){
+
+        } else {
+
+        }
         $ep_line = explode("|", $episodes[$ep_id]);
         $episode = file($dir . "/txts/" . $ep_line[1] . ".txt");
         $json = array_merge($json, $episode);
